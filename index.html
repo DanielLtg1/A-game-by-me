@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Game by DanieL_ltg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/icon.jpeg " type="image/x-icon">
+</head>
+<body>
+    <div class="gameScreen">
+        <img src="imagens/grass.png" alt="grama" id="grass">
+        <img src="imagens/stars.png" alt="estrelas" id="stars">
+        <img src="imagens/cloud.png" alt="nuvem" class="cloud" id="cloud1">
+        <img src="imagens/cloud.png" alt="nuvem" class="cloud" id="cloud2">
+        <img src="imagens/tree.png" alt="arvore" class="tree" id="tree1">
+        <img src="imagens/tree.png" alt="arvore" class="tree" id="tree2">
+        <img src="imagens/rock.png" alt="pedra" class="rock">
+        <img src="imagens/dog.gif" alt="personagem" class="dog">
+        <div id="start">
+            <h1>Selecione a Dificuldade</h1>
+            <div id="difficulty">
+                <ul>
+                    <li>
+                        <button type="button" class="btn" id="easy">Fácil</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn" id="medium">Médio</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn" id="hard">Difícil</button>
+                    </li>
+                </ul>
+            </div>
+            <button id="btn_start" onclick="startGame()">Iniciar</button>
+        </div>
+        <div id="counter">
+            <p id="txt_counter">Pulos: 0</p>
+            <p id="txt_score">Pontuação: 0</p>
+        </div>
+        <div id="selectedDifficulty">
+            <p id="txt_selectedDifficulty">Dificuldade: </p>
+        </div>  
+        <div id="end">
+            <h1>Você Morreu!</h1>
+            <button id="btn_restart" onclick="location.reload()">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

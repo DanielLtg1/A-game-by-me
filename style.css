@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gameScreen {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    background: #340ead;
+    background: linear-gradient(#2f0277 7%, #500fc0 23%, #b429ec 40%, #ff9700 88%);
+}
+
+#grass {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+}
+.cloud {
+    position: absolute;
+    width: 50dvh;
+}
+
+#cloud1 {
+    top: 60px;
+    animation: cloud1Animation 22s infinite linear;
+}
+
+#cloud2 {
+    top: 70px;
+    animation: cloud2Animation 28s infinite linear;
+}
+
+@keyframes cloud1Animation {
+    from {
+        right: -35%;
+    }
+    to {
+        right: 105%;
+    }
+}
+
+@keyframes cloud2Animation {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 105%;
+    }
+}
+
+.tree {
+    position: absolute;
+    width: 40dvh;
+    bottom: 29px;
+}
+
+#tree1 {
+    left: 300px;
+}
+
+#tree2 {
+    right: 200px;
+}
+
+.rock {
+    position: absolute;
+    width: 150px;
+    bottom: 30px;
+    /*left: 285px;*/
+    right: -10%;
+    transition: .3s;
+}
+
+
+@keyframes rockAnimation {
+    from {
+        right: -10%;
+    }
+    to {
+        right: 105%;
+    }
+}
+
+.dog {
+    position: absolute;
+    width: 200px;
+    bottom: 15px;
+    left: 180px;
+}
+
+@keyframes dogJump {
+    0% {
+        bottom: 15px;
+    }  
+    50% {
+        bottom: 22%;
+    }
+    100% {  
+        bottom: 15 px;
+    }
+}
+
+
+.jump {
+    animation: dogJump .7s ease-out;
+}
+
+#counter {
+    background-color: #7205ef;
+    width: 150px;
+    height: 90px;
+    border-radius: 20px;
+    top: 5%;
+    left: 2.5%;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#txt_counter, #txt_score {
+    color: #fffbf5;
+    font-size: 20px;
+}
+
+#txt_score {
+    margin-top: 5px;
+}
+
+#start {
+    width: 300px;
+    height: 450px;
+    background-color: #f5eada;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid #7205ef;
+    border-radius: 20px;
+}
+
+#start h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #7205ef;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+}
+
+#btn_start { 
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #f5eada;
+    border: 2px solid #7205ef;
+    color: #7205ef;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .5s;
+    margin-top: 290px;
+}
+
+#btn_start:hover {
+    color: #fff;
+    background-color: #7205ef;
+}
+
+#difficulty {
+    width: 200px;
+    height: 250px;
+    background-color: #7205ef;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.5rem;
+}
+
+#difficulty ul {
+    list-style: none;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #7205ef;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #7205ef;
+}
+
+
+#easy:hover {
+    background-color: #7205ef;
+    border: 2px solid #1ce016;
+    color:#fff;
+}
+
+#medium:hover {    
+    background-color: #7205ef;
+    border: 2px solid #ece931;
+    color:#fff;
+}
+
+#hard:hover {
+    background-color: #7205ef;
+    border: 2px solid #c21a1a;
+    color:#fff;
+}
+
+.easy {
+    animation: rockAnimation 2s infinite linear;
+}
+
+.medium {
+    animation: rockAnimation 1.5s infinite linear;
+
+}
+
+.hard {
+    animation: rockAnimation 1s infinite linear;
+}
+
+#selectedDifficulty {
+    background-color: #7205ef;
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    top: 5%;
+    right: 2.5%;
+    border: 2px solid #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#txt_selectedDifficulty {
+    color: #fffbf5;
+    font-size: 20px;
+    transition: .5;
+}
+
+#txt_selectedDifficulty span {
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+#end {
+    width: 200px;
+    height: 180px;
+    background-color: #f5eada;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid #7205ef;
+    border-radius: 20px; 
+    visibility: hidden;
+    transition: .7s;
+}
+
+#end h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #7205ef;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+}
+
+#btn_restart {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #f5eada;
+    border: 2px solid #7205ef;
+    color: #7205ef;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .5s;
+    margin-top: 18px;
+}
+
+
+#btn_restart:hover {
+    background-color: #7205ef;
+    color: #fff;
+}
