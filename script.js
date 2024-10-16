@@ -20,7 +20,7 @@ const loop = setInterval(() => {
         rock.style.left = `${rockPosition}px`;
         dog.style.animation = 'none';
         dog.style.bottom = `${dogPosition}px`;
-        dog.src = 'imagens/dead.png';
+        dog.src = 'dead.png';
         dog.style.bottom = '62px'
         dog.style.marginLeft = '30px'
         dog.style.width = '70px'
