@@ -23,7 +23,7 @@ const loop = setInterval(() => {
         dog.src = 'dead.png';
         dog.style.bottom = '62px'
         dog.style.marginLeft = '30px'
-        dog.style.width = '70px'
+        dog.style.width = '85px'
         clearInterval(loop);
         estado = "morto";
         document.getElementById('end').style.visibility = 'visible';
