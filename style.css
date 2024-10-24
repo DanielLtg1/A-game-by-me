@@ -236,7 +236,7 @@
 }
 
 .easy {
-    animation: rockAnimation 2s infinite linear;
+    animation: rockAnimation 1s infinite linear;
 }
 
 .medium {
@@ -245,7 +245,7 @@
 }
 
 .hard {
-    animation: rockAnimation 1s infinite linear;
+    animation: rockAnimation 2s infinite linear;
 }
 
 #selectedDifficulty {
